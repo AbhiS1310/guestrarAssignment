@@ -33,10 +33,10 @@ const subCategorySchema = new mongoose.Schema({
 subCategorySchema.pre('save', async function (next) {
 	if (this.isNew) {
 		try {
-			const category = await category.findById(this.category);
-			if (category) {
-				this.taxApplicability = category.taxApplicability;
-				this.tax = category.tax;
+			const cat = await category.findById(this.category);
+			if (cat) {
+				this.taxApplicability = cat.taxApplicability;
+				this.tax = cat.tax;
 			}
 		} catch (error) {
 			return next(error);
