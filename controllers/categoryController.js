@@ -29,7 +29,7 @@ export const getCategoryByIdOrName = async (req, res, next) => {
 	try {
 		const category = id ? await Category.findById(id) : await Category.findOne({name});
 		if (!category) {
-			return next(new ErrorHandler('Category not found',400));
+			return next(new ErrorHandler('Category not found',404));
 		}
 		res.status(200).json(category);
 	} catch (error) {
@@ -45,7 +45,7 @@ export const editCategory = async (req, res, next) => {
 	try {
 		const category = await Category.findByIdAndUpdate(id, updates, {new: true});
 		if (!category) {
-			return next(new ErrorHandler('Category not found',400));
+			return next(new ErrorHandler('Category not found',404));
 		}
 		res.status(200).json(category);
 	} catch (error) {

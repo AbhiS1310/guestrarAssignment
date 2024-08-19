@@ -26,3 +26,9 @@ PORT
     - `models`: Contains the models/schemas for the backend
     - `routes`: Contains the routes for the backend
     - `utils`: Contains custom Error Handler
+# Q&A
+## Database
+- MongoDB's flexible schema and document-oriented structure make it ideal for managing complex menu data, allowing for easy updates and efficient querying. Its scalability ensures smooth handling of growing menu offerings.
+
+## What you would have done differently given more time?
+- I would have implemented user database with authorization and authentication middlewares to access, create and modify category, subcategory and items
