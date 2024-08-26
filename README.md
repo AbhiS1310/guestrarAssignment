@@ -1,5 +1,5 @@
 # Guestara Task
-### Submitted by Krishna Jaiswal
+### Submitted by Abhishek Chaudhary
 
 ## Steps to run the project
 1. Clone the repository
